@@ -12,7 +12,7 @@ const museoModerno = MuseoModerno({
 });
 
 export const metadata = {
-  title: "Nintendo",
+  title: "Stardew vallery for Nintendo",
   description:
     "Nintendo is a Japanese multinational consumer electronics and video game company headquartered in Kyoto.",
 };

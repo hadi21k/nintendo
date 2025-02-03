@@ -20,7 +20,7 @@ const ScrolledImages = ({
             src={image}
             alt={index}
             className="w-full h-full object-cover flex-shrink-0 rounded-xl scroll-image"
-            style={{ scale: index === activeImage ? 1 : 0.8 }}
+            style={{ scale: index === activeImage ? 1 : 0.9 }}
           />
         ))}
       </div>

@@ -4,55 +4,55 @@ const items = [
   {
     title: "About Nintendo",
     children: [
-      { title: "Careers", link: "/company" },
-      { title: "Corporate Social Responsibility", link: "/csr" },
+      { title: "Careers", link: "/" },
+      { title: "Corporate Social Responsibility", link: "/" },
     ],
   },
   {
     title: "Shop",
     children: [
-      { title: "Games", link: "/games" },
-      { title: "Hardware", link: "/hardware" },
-      { title: "Merchandise", link: "/merchandise" },
-      { title: "Sales & deals", link: "/sales-deals" },
-      { title: "Exclusives", link: "/exclusives" },
-      { title: "Online service", link: "/online-service" },
-      { title: "Nintendo NY store", link: "/nintendo-ny-store" },
+      { title: "Games", link: "/" },
+      { title: "Hardware", link: "/" },
+      { title: "Merchandise", link: "/" },
+      { title: "Sales & deals", link: "/" },
+      { title: "Exclusives", link: "/" },
+      { title: "Online service", link: "/" },
+      { title: "Nintendo NY store", link: "/" },
     ],
   },
   {
     //    Orders
     title: "Orders",
     children: [
-      { title: "Order details", link: "/order-details" },
-      { title: "Shipping info", link: "/shipping-info" },
-      { title: "Returns & exchanges", link: "/returns-exchanges" },
+      { title: "Order details", link: "/" },
+      { title: "Shipping info", link: "/" },
+      { title: "Returns & exchanges", link: "/" },
       { title: "FAQ", link: "/faq" },
     ],
   },
   {
     title: "Support",
     children: [
-      { title: "Nintendo Switch", link: "/nintendo-switch" },
-      { title: "Nintendo Account", link: "/nintendo-account" },
-      { title: "Other systems", link: "/other-systems" },
-      { title: "Repairs", link: "/repairs" },
+      { title: "Nintendo Switch", link: "/" },
+      { title: "Nintendo Account", link: "/" },
+      { title: "Other systems", link: "/" },
+      { title: "Repairs", link: "/" },
       {
         title: "Nintendo product recycling",
-        link: "/nintendo-product-recycling",
+        link: "/",
       },
-      { title: "Warranty", link: "/warranty" },
+      { title: "Warranty", link: "/" },
       {
         title: "Licensed product information",
-        link: "/licensed-product-information",
+        link: "/",
       },
     ],
   },
   {
     title: "Parents",
     children: [
-      { title: "Parental controls", link: "/parental-controls" },
-      { title: "Safety", link: "/safety" },
+      { title: "Parental controls", link: "/" },
+      { title: "Safety", link: "/" },
     ],
   },
   {
@@ -60,12 +60,12 @@ const items = [
     children: [
       {
         title: "Health & safety precautions",
-        link: "/health-safety-precautions",
+        link: "/",
       },
-      { title: "Wireless regulatory info", link: "/wireless-regulatory-info" },
+      { title: "Wireless regulatory info", link: "/" },
       {
         title: "Supply chain transparency",
-        link: "/supply-chain-transparency",
+        link: "/",
       },
     ],
   },
@@ -84,10 +84,9 @@ const BottomBar = () => {
                   <Link
                     key={index}
                     href={child.link}
-                    className="text-main block group relative font-medium"
+                    className="text-main block group relative font-medium hover:underline"
                   >
                     <li>{child.title}</li>
-                    <div className="absolute bg-main bottom-0 inset-x-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0.5" />
                   </Link>
                 ))}
               </ul>

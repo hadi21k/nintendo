@@ -24,7 +24,7 @@ const FloatingNavbar = () => {
 
   return (
     <div className="lg:hidden z-[1000] fixed py-0 bottom-0 min-h-16 inset-x-0 flex flex-col items-center justify-center">
-      <div className="h-full relative w-[440px]">
+      <div className="h-full relative w-full md:w-[440px]">
         <div className="z-[240] relative w-full bg-white rounded-3xl flex items-center px-10 justify-between shadow-2xl p-1 transition-colors duration-300">
           <AlignJustify className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer" />
           <Heart className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer" />

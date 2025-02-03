@@ -20,10 +20,10 @@ const FloatingDownloadScrollbar = ({ showLargeDeviceScrolledNavbar }) => {
             </div>
             <AnimatedButton
               hoverClassName="bg-main"
-              className="px-4 py-2 rounded-3xl bg-main text-white hover:bg-main"
+              className="px-1 md:px-4 max-sm:text-xs py-2 rounded-3xl bg-main text-white hover:bg-main"
             >
               <h1 className="text-white flex items-center gap-2 z-10">
-                <Download className="w-5 h-5" />
+                <Download className="sm:w-5 sm:h-5 w-4 h-4" />
                 Direct Download
               </h1>
             </AnimatedButton>
