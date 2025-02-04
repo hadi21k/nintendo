@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Cloud, Gamepad, Newspaper, Sparkle, SwatchBook } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,7 +10,7 @@ import SwitchMenu from "./SwitchMenu";
 import PlayMenu from "./PlayMenu";
 import { useBodyOverflow } from "@/hooks/useBodyOverflow";
 
-const menus = [
+export const menus = [
   {
     name: "My nintendo Store",
     key: "store",

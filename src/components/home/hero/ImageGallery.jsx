@@ -7,6 +7,7 @@ const ImageGallery = ({
   activeImage,
   handleImageChange,
   scrollHeroContainerRef,
+  isExpanded,
 }) => {
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
@@ -80,7 +81,7 @@ const ImageGallery = ({
   const handleImageClick = (index) => {
     if (index === activeImage) return;
 
-    handleImageChange(activeImage, index, scrollHeroContainerRef);
+    handleImageChange(activeImage, index, scrollHeroContainerRef, isExpanded);
 
     setActiveImage(index);
 

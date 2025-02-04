@@ -6,6 +6,7 @@ const ScrolledImages = ({
   images,
   scrollHeroContainerRef,
   activeImage,
+  setImagesExpanded,
 }) => {
   return (
     <div className="h-[380px] w-full max-w-8xl relative overflow-x-auto group">
@@ -19,7 +20,8 @@ const ScrolledImages = ({
             key={index}
             src={image}
             alt={index}
-            className="w-full h-full object-cover flex-shrink-0 rounded-xl scroll-image"
+            onClick={() => setImagesExpanded(true)}
+            className="w-full cursor-zoom-in h-full object-cover flex-shrink-0 rounded-xl scroll-image"
             style={{ scale: index === activeImage ? 1 : 0.9 }}
           />
         ))}

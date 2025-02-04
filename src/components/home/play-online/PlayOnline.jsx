@@ -50,8 +50,8 @@ const PlayOnline = () => {
             <Image
               src="https://shadowindali.github.io/Nintendo/controllerhand.avif"
               alt="online"
-              width={300}
-              height={300}
+              width={500}
+              height={500}
               className="max-w-full w-full h-full max-md:hidden"
             />
           </div>

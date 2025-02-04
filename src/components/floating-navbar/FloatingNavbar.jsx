@@ -7,13 +7,16 @@ import { useBodyOverflow } from "@/hooks/useBodyOverflow";
 import FloatingLoginDetails from "./FloatingLoginDetails";
 import FloatingDownloadScrollbar from "./FloatingDownloadScrollbar";
 import FloatingSearchBar from "./FloatingSearchBar";
+import FloatingMenu from "./FloatingMenu";
+import { IoMdCloseCircle } from "react-icons/io";
 
 const FloatingNavbar = () => {
   const { state, updateGlobalState } = useGlobal();
   const [loginDetails, setLoginDetails] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  useBodyOverflow(loginDetails || showSearchBar);
+  useBodyOverflow(loginDetails || showSearchBar || showMenu);
 
   const openLoginDetails = () => {
     updateGlobalState({
@@ -26,7 +29,22 @@ const FloatingNavbar = () => {
     <div className="lg:hidden z-[1000] fixed py-0 bottom-0 min-h-16 inset-x-0 flex flex-col items-center justify-center">
       <div className="h-full relative w-full md:w-[440px]">
         <div className="z-[240] relative w-full bg-white rounded-3xl flex items-center px-10 justify-between shadow-2xl p-1 transition-colors duration-300">
-          <AlignJustify className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer" />
+          {!showMenu ? (
+            <AlignJustify
+              onClick={() => {
+                updateGlobalState({
+                  showLargeDeviceScrolledNavbar: false,
+                });
+                setShowMenu(true);
+              }}
+              className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer"
+            />
+          ) : (
+            <IoMdCloseCircle
+              onClick={() => setShowMenu(false)}
+              className="text-3xl cursor-pointer"
+            />
+          )}
           <Heart className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer" />
           <div
             onClick={() => setShowSearchBar(!showSearchBar)}
@@ -40,6 +58,8 @@ const FloatingNavbar = () => {
             className="w-8 h-8 text-gray-500 hover:text-main cursor-pointer"
           />
         </div>
+
+        <FloatingMenu showMenu={showMenu} setShowMenu={setShowMenu} />
 
         <FloatingSearchBar
           showSearchBar={showSearchBar}
