@@ -20,7 +20,7 @@ const FloatingLoginDetails = ({ loginDetails, setLoginDetails }) => {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="bg-white-gray z-[100] rounded-t-3xl w-full fixed inset-x-0 bottom-0 max-w-[440px] mx-auto max-h-[80vh] overflow-y-auto"
+            className="bg-white-gray z-[100] rounded-t-3xl w-full fixed inset-x-0 bottom-0 max-w-[440px] mx-auto max-h-[80vh] overflow-y-hidden"
           >
             <div className="bg-white relative rounded-t-3xl py-4 flex items-center justify-center">
               Sign Up / Login
@@ -29,7 +29,7 @@ const FloatingLoginDetails = ({ loginDetails, setLoginDetails }) => {
                 onClick={() => setLoginDetails(false)}
               />
             </div>
-            <div className="flex flex-col space-y-2 py-4 px-2">
+            <div className="flex flex-col space-y-2 py-4 px-2 max-h-[60vh] overflow-y-auto">
               <LoginDetails />
             </div>
             <button

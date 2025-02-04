@@ -4,14 +4,14 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-black py-4 min-h-20 flex items-center text-white">
-      <div className="lg:max-w-[1450px] flex max-md:flex-col max-md:space-y-4 items-center justify-between w-full mx-auto xl:px-14 px-4">
-        <p className="text-sm max-md:text-xs max-md:text-center">
+    <div className="w-full bg-black py-8 max-lg:h-36 h-20 text-white">
+      <div className="lg:max-w-[1450px] flex max-lg:flex-col max-lg:space-y-4 lg:space-x-24 items-center justify-between w-full mx-auto xl:px-10 px-4">
+        <p className="text-sm max-lg:text-xs flex-1 flex-shrink max-lg:text-center">
           © Nintendo. Games are property of their respective owners. Nintendo of
           America Inc. Headquarters are in Redmond, Washington, USA
         </p>
-        <div className="flex space-x-4 items-center">
-          <ul className="flex items-center space-x-2 text-sm max-md:text-xs">
+        <div className="flex space-x-2 items-center">
+          <ul className="flex items-center space-x-6 text-sm max-lg:text-xs">
             <Link href="http://testtt.com">
               <li>Contact us</li>
             </Link>
@@ -22,14 +22,17 @@ const Footer = () => {
               <li>Terms of use</li>
             </Link>
           </ul>
-          <Link href="/" className="flex space-x-2">
+          <Link href="/" className="flex space-x-1 items-center">
             <Image
               src="/americaflag.jpg"
               alt="profile"
-              width={20}
-              height={20}
+              width={45}
+              height={25}
+              className="rounded-lg"
             />
-            <span className="hover:underline text-xs transition-all duration-300">English (United States)</span>
+            <span className="hover:underline text-xs transition-all duration-300">
+              English (United States)
+            </span>
           </Link>
         </div>
       </div>

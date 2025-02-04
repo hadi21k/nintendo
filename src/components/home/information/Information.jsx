@@ -99,7 +99,7 @@ const Information = () => {
                       <Link
                         key={linkIndex}
                         href={link.href}
-                        className="text-main font-bold underline underline-offset-4"
+                        className="text-main hover:text-main-hover font-bold underline underline-offset-4"
                       >
                         {link.text}
                       </Link>

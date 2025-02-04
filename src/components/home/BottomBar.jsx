@@ -84,7 +84,7 @@ const BottomBar = () => {
                   <Link
                     key={index}
                     href={child.link}
-                    className="text-main block group relative font-medium hover:underline"
+                    className="text-main hover:text-main-hover block group relative font-medium hover:underline"
                   >
                     <li>{child.title}</li>
                   </Link>

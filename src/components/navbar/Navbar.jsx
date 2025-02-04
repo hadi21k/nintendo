@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav className="h-12 relative max-lg:bg-main">
-      <div className="flex h-full justify-between">
+      <div className="flex h-full space-x-2 justify-between">
         <div className="flex items-center space-x-2">
           <svg
             className="text-white bg-main h-full px-4"
@@ -60,14 +60,14 @@ const Navbar = () => {
             <Input
               type="text"
               placeholder="Search"
-              className="w-80"
+              className="w-72"
               onFocus={() => setIsInputFocused(true)}
             />
             <DropdownMenu
               open={allCategoriesMenuIsOpen}
               onOpenChange={setAllCategoriesMenuIsOpen}
             >
-              <DropdownMenuTrigger className="flex hover:text-main items-center space-x-1">
+              <DropdownMenuTrigger className="flex text-xs hover:text-main items-center space-x-1">
                 <div>All categories </div>
 
                 <MdOutlineKeyboardArrowUp
@@ -90,27 +90,27 @@ const Navbar = () => {
         <div className="flex items-center gap-1">
           {!isInputFocused ? (
             <>
-              <ul className="flex items-center gap-7 text-sm max-lg:hidden">
-                <Link href="/" className="text-black hover:text-main">
-                  <li className="font-bold flex items-center gap-2 px-2">
+              <ul className="hidden items-center gap-7 text-sm lg:flex">
+                <Link href="/" className="text-black hover:text-main text-sm">
+                  <li className="font-medium flex items-center gap-1">
                     <MdContactSupport />
                     Support
                   </li>
                 </Link>
-                <Link href="/" className="text-black hover:text-main">
-                  <li className="font-bold flex items-center gap-2 px-2">
+                <Link href="/" className="text-black hover:text-main text-sm">
+                  <li className="font-medium flex items-center gap-1">
                     <FaHeart />
                     Wish List
                   </li>
                 </Link>
-                <Link href="/" className="text-black hover:text-main">
-                  <li className="font-bold flex items-center gap-2 px-2">
+                <Link href="/" className="text-black hover:text-main text-sm">
+                  <li className="font-medium flex items-center gap-1">
                     <FaCartShopping />
                     Cart
                   </li>
                 </Link>
                 <li
-                  className="font-bold cursor-pointer flex items-center gap-2 px-2 hover:text-main"
+                  className="font-medium cursor-pointer flex items-center gap-1 text-sm hover:text-main"
                   onClick={() => {
                     setLoginSignUpMenuIsOpen(true);
                   }}
@@ -127,8 +127,8 @@ const Navbar = () => {
                   <Image
                     src="/americaflag.jpg"
                     alt="profile"
-                    width={35}
-                    height={35}
+                    width={25}
+                    height={25}
                   />
                 </Link>
               </div>

@@ -36,7 +36,7 @@ const Explore = () => {
 
             <div
               onClick={() => setShowMore(!showMore)}
-              className="flex items-center w-32 text-main font-bold cursor-pointer"
+              className="flex items-center w-32 text-main hover:text-main-hover font-bold cursor-pointer"
             >
               {showMore ? <Plus /> : <Minus />}
               {showMore ? "Show Less" : "Show More"}

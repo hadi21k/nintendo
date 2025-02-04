@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         main: "#e60012",
+        "main-hover":"#ac000d",
         "white-gray": "#efefef",
       },
       borderRadius: {

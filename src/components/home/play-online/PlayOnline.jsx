@@ -46,13 +46,13 @@ const PlayOnline = () => {
               </AnimatedButton>
             </div>
           </div>
-          <div className="w-full h-full">
+          <div className="grid place-items-center">
             <Image
               src="https://shadowindali.github.io/Nintendo/controllerhand.avif"
               alt="online"
-              width={500}
-              height={500}
-              className="max-w-full w-full h-full max-md:hidden"
+              width={900}
+              height={900}
+              className="h-[75%] lg:h-full max-md:hidden"
             />
           </div>
         </div>
