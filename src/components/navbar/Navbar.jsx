@@ -119,7 +119,7 @@ const Navbar = () => {
                   Log in / Sign up
                 </li>
               </ul>
-              <div className="flex items-center px-2">
+              <div className="flex items-center max-lg:space-x-2 px-1">
                 <h1 className="text-white font-semibold text-sm lg:hidden">
                   My Nintendo Store
                 </h1>

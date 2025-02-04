@@ -9,3 +9,7 @@
     repeat-x;
   background-size: auto 14px;
 }
+
+body {
+  font-family: var(--font-raleway);
+}

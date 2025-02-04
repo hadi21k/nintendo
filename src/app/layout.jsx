@@ -1,4 +1,4 @@
-import { MuseoModerno } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
 import { GlobalProvider } from "@/context/GlobalContext";
 import Navbar from "@/components/navbar/Navbar";
@@ -6,9 +6,10 @@ import SecondNavbar from "@/components/second-navbar/SecondNavbar";
 import DetailedNavbar from "@/components/detailed-navbar/DetailedNavbar";
 import FloatingNavbar from "@/components/floating-navbar/FloatingNavbar";
 
-const museoModerno = MuseoModerno({
-  variable: "--font-museo-moderno",
-  subsets: ["latin"],
+const raleway = Raleway({
+  subsets: ["latin"], 
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-raleway", 
 });
 
 export const metadata = {
@@ -20,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${museoModerno.variable} antialiased`}>
+      <body className={`${raleway.variable} bg-white text-black`}>
         <GlobalProvider>
           <Navbar />
           <SecondNavbar />
