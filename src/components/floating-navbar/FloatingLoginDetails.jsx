@@ -2,10 +2,10 @@ import { X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import LoginDetails from "../navbar/LoginDetails";
 
-const FloatingLoginDetails = ({ loginDetails, setLoginDetails }) => {
+const FloatingLoginDetails = ({ modals, setModals }) => {
   return (
     <AnimatePresence>
-      {loginDetails && (
+      {modals.loginDetails && (
         <>
           <motion.div
             initial={{ opacity: 0 }}
@@ -13,7 +13,7 @@ const FloatingLoginDetails = ({ loginDetails, setLoginDetails }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black z-[99]"
-            onClick={() => setLoginDetails(false)}
+            onClick={() => setModals({ loginDetails: false })}
           />
           <motion.div
             initial={{ y: "100%" }}
@@ -26,14 +26,14 @@ const FloatingLoginDetails = ({ loginDetails, setLoginDetails }) => {
               Sign Up / Login
               <X
                 className="w-8 h-8 absolute right-4 text-gray-500 hover:text-main cursor-pointer"
-                onClick={() => setLoginDetails(false)}
+                onClick={() => setModals({ loginDetails: false })}
               />
             </div>
             <div className="flex flex-col space-y-2 py-4 px-2 max-h-[60vh] overflow-y-auto">
               <LoginDetails />
             </div>
             <button
-              onClick={() => setLoginDetails(false)}
+              onClick={() => setModals({ loginDetails: false })}
               className="mt-4 text-main w-full py-2 font-semibold"
             >
               Close

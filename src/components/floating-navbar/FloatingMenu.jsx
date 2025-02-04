@@ -3,10 +3,10 @@ import { AnimatePresence, motion } from "motion/react";
 import { menus } from "../second-navbar/SecondNavbar";
 import Link from "next/link";
 
-const FloatingMenu = ({ showMenu, setShowMenu }) => {
+const FloatingMenu = ({ modals, setModals }) => {
   return (
     <AnimatePresence>
-      {showMenu && (
+      {modals.showMenu && (
         <>
           <motion.div
             initial={{ opacity: 0 }}
@@ -14,7 +14,7 @@ const FloatingMenu = ({ showMenu, setShowMenu }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black z-[99]"
-            onClick={() => setShowMenu(false)}
+            onClick={() => setModals({ showMenu: false })}
           />
           <motion.div
             initial={{ y: "100%" }}
@@ -27,7 +27,7 @@ const FloatingMenu = ({ showMenu, setShowMenu }) => {
               Menu
               <X
                 className="w-8 h-8 absolute right-4 text-gray-500 hover:text-main cursor-pointer"
-                onClick={() => setShowMenu(false)}
+                onClick={() => setModals({ showMenu: false })}
               />
             </div>
             {menus.map((menu, index) => (
@@ -39,7 +39,6 @@ const FloatingMenu = ({ showMenu, setShowMenu }) => {
               >
                 {menu.url ? (
                   <Link
-                    luc
                     href={menu.url}
                     className="flex items-center gap-2 p-4 hover:bg-gray-100"
                   >

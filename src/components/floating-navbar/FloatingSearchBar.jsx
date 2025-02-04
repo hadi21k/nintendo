@@ -6,23 +6,23 @@ import { IoMdCloseCircle } from "react-icons/io";
 import SearchInputDetails from "../navbar/SearchInputDetails";
 import { products, topics } from "../navbar/SearchInputMenu";
 
-const FloatingSearchBar = ({ showSearchBar, setShowSearchBar }) => {
+const FloatingSearchBar = ({ modals, setModals }) => {
   const inputRef = useRef(null);
   useEffect(() => {
     if (inputRef.current) {
-      inputRef.current.focus()
+      inputRef.current.focus();
     }
-  }, [showSearchBar]);
+  }, [modals.showSearchBar]);
   return (
     <AnimatePresence>
-      {showSearchBar && (
+      {modals.showSearchBar && (
         <motion.div
           className="bg-white w-full max-h-full overflow-y-auto fixed inset-0 z-[1200] px-6 py-2 min-h-screen overflow-hidden 2xl:flex max-2xl:space-y-4 2xl:space-x-64"
           initial={{ y: "-100%" }}
           animate={{ y: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           exit={{ y: "-100%" }}
-          key={showSearchBar}
+          key={modals.showSearchBar}
         >
           <div className="border-b mb-2 border-main hover:border-main flex items-center justify-between w-full">
             <div className="flex items-center">
@@ -35,7 +35,7 @@ const FloatingSearchBar = ({ showSearchBar, setShowSearchBar }) => {
               />
             </div>
             <IoMdCloseCircle
-              onClick={() => setShowSearchBar(false)}
+              onClick={() => setModals({ showSearchBar: false })}
               className="text-5xl px-2 cursor-pointer"
             />
           </div>
