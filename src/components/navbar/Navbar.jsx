@@ -90,27 +90,27 @@ const Navbar = () => {
         <div className="flex items-center gap-1">
           {!isInputFocused ? (
             <>
-              <ul className="hidden items-center gap-7 text-sm lg:flex">
-                <Link href="/" className="text-black hover:text-main text-sm">
+              <ul className="hidden items-center gap-7 max-xl:text-sm lg:flex">
+                <Link href="/" className="text-black hover:text-main">
                   <li className="font-medium flex items-center gap-1">
                     <MdContactSupport />
                     Support
                   </li>
                 </Link>
-                <Link href="/" className="text-black hover:text-main text-sm">
+                <Link href="/" className="text-black hover:text-main">
                   <li className="font-medium flex items-center gap-1">
                     <FaHeart />
                     Wish List
                   </li>
                 </Link>
-                <Link href="/" className="text-black hover:text-main text-sm">
+                <Link href="/" className="text-black hover:text-main">
                   <li className="font-medium flex items-center gap-1">
                     <FaCartShopping />
                     Cart
                   </li>
                 </Link>
                 <li
-                  className="font-medium cursor-pointer flex items-center gap-1 text-sm hover:text-main"
+                  className="font-medium cursor-pointer flex items-center gap-1 hover:text-main"
                   onClick={() => {
                     setLoginSignUpMenuIsOpen(true);
                   }}
@@ -119,7 +119,7 @@ const Navbar = () => {
                   Log in / Sign up
                 </li>
               </ul>
-              <div className="flex items-center space-x-5 px-2">
+              <div className="flex items-center px-2">
                 <h1 className="text-white font-semibold text-sm lg:hidden">
                   My Nintendo Store
                 </h1>
