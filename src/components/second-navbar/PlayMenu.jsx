@@ -31,9 +31,10 @@ const items = [
 const PlayMenu = ({ activeMenu, setActiveMenu }) => {
   return (
     <motion.div
-      className="w-full h-screen bg-black/40 absolute top-12 z-50 overflow-hidden"
+      className="w-full h-screen bg-black/40 absolute top-10 z-50 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.1 }}
       onClick={() => setActiveMenu("")}
     >
@@ -52,14 +53,14 @@ const PlayMenu = ({ activeMenu, setActiveMenu }) => {
         >
           <X className="w-8 h-8" />
         </Button>
-        <div className="m-auto w-full max-w-lg">
-          <div className="grid grid-cols-2">
+        <div className="m-auto w-full max-w-xs">
+          <div className="grid grid-cols-2 gap-4">
             {items.map((game, index) => (
               <div
                 className="flex flex-col items-center space-y-2 cursor-pointer group"
                 key={index}
               >
-                <div className="grid place-items-center border group-hover:bg-main group-hover:text-white transition-colors duration-300 rounded-xl w-9/12 h-20">
+                <div className="grid place-items-center border group-hover:bg-main group-hover:text-white transition-colors duration-300 rounded-xl w-full h-20">
                   {game.image}
                 </div>
                 <h1 className="text-sm group-hover:text-main">{game.title}</h1>

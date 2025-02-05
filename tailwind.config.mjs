@@ -14,6 +14,7 @@ export default {
         main: "#e60012",
         "main-hover":"#ac000d",
         "white-gray": "#efefef",
+        "dark-gray": "#484848",
       },
       borderRadius: {
         lg: "var(--radius)",

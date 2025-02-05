@@ -13,3 +13,19 @@
 body {
   font-family: var(--font-raleway);
 }
+
+.link {
+  @apply text-white md:text-3xl text-2xl;
+}
+
+.md-container {
+  @apply lg:max-w-[1250px] w-full mx-auto xl:px-14 px-4;
+}
+
+.lg-container {
+  @apply lg:max-w-[1500px] w-full mx-auto xl:px-14 px-4
+}
+
+.text-xs-800 {
+  @apply text-xs font-bold
+}

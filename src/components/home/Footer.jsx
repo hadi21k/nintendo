@@ -2,6 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+const links = [
+  {
+    title: "Contact us",
+    href: "http://testtt.com",
+  },
+  {
+    title: "Website Feedback",
+    href: "http://testtt.com",
+  },
+  {
+    title: "Terms of use",
+    href: "http://testtt.com",
+  },
+];
+
 const Footer = () => {
   return (
     <div className="w-full bg-black py-8 max-lg:h-36 h-20 text-white">
@@ -12,15 +27,11 @@ const Footer = () => {
         </p>
         <div className="flex space-x-2 items-center">
           <ul className="flex items-center space-x-6 text-sm max-lg:text-xs">
-            <Link href="http://testtt.com">
-              <li>Contact us</li>
-            </Link>
-            <Link href="http://testtt.com">
-              <li>Website Feedback</li>
-            </Link>
-            <Link href="http://testtt.com">
-              <li>Terms of use</li>
-            </Link>
+            {links.map((link, index) => (
+              <li key={index}>
+                <Link href={link.href}>{link.title}</Link>
+              </li>
+            ))}
           </ul>
           <Link href="/" className="flex space-x-1 items-center">
             <Image

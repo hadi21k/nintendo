@@ -3,7 +3,7 @@ import React from "react";
 const Disclaimer = () => {
   return (
     <div className="w-full">
-      <div className="lg:max-w-[1250px] w-full mx-auto xl:px-14 px-4">
+      <div className="md-container">
         <p className="text-gray-400 text-xs">
           WARNING: If you have epilepsy or have had seizures or other unusual
           reactions to flashing lights or patterns, consult a doctor before

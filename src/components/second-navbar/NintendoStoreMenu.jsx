@@ -70,7 +70,7 @@ const NintendoStoreMenu = ({ activeMenu, setActiveMenu }) => {
   return (
     <motion.div
       layout
-      className="w-full h-screen bg-black/40 absolute top-12 z-50 overflow-hidden"
+      className="w-full h-screen bg-black/50 absolute top-10 z-50 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -98,10 +98,10 @@ const NintendoStoreMenu = ({ activeMenu, setActiveMenu }) => {
             </Button>
           </div>
           <div className="zigzag" />
-          <div className="flex gap-4 justify-center m-auto">
+          <div className="flex justify-center m-auto text-sm">
             {items.map((item, index) => (
               <div key={index} className="p-4">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-2">
                   <span className="w-6 h-6 text-main">{item.icon}</span>
                   <span className="font-semibold hover:text-main cursor-pointer">
                     {item.title}
@@ -128,10 +128,10 @@ const NintendoStoreMenu = ({ activeMenu, setActiveMenu }) => {
               </div>
             ))}
           </div>
-          <div className="flex items-center justify-center py-4">
+          <div className="flex items-center justify-center py-2">
             <AnimatedButton
-              className="px-8 rounded-xl py-3 text-main font-medium text-xl"
-              hoverClassName="bg-transparent border px-10 rounded-2xl border-main"
+              className="px-6 rounded-xl py-3 text-main font-bold"
+              hoverClassName="bg-transparent border px-4 rounded-2xl border-main"
             >
               Shop all
             </AnimatedButton>

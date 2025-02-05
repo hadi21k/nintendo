@@ -2,7 +2,7 @@
 import { Cloud, Gamepad, Newspaper, Sparkle, SwatchBook } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import NintendoStoreMenu from "./NintendoStoreMenu";
 import { AnimatePresence } from "motion/react";
 import GamesMenu from "./GamesMenu";
@@ -43,11 +43,11 @@ const SecondNavbar = () => {
   useBodyOverflow(!!activeMenu);
 
   return (
-    <div className="border-y h-12 max-xl:hidden flex items-center relative">
+    <div className="border-y h-10 max-lg:hidden flex items-center relative">
       <div className="max-w-4xl m-auto">
         <div className="flex gap-6 items-center">
           {menus.map((menu, index) => (
-            <div key={index}>
+            <div key={index} className="text-sm font-semibold">
               {menu.url ? (
                 <Link href={menu.url} className="flex items-center gap-2">
                   {menu.icon}
@@ -59,16 +59,14 @@ const SecondNavbar = () => {
                     activeMenu === menu.key ? "border-b-4 border-main" : ""
                   }`}
                   onClick={() => {
-                    if (activeMenu === menu.key) {
-                      setActiveMenu("");
-                    } else {
-                      setActiveMenu(menu.key);
-                    }
+                    setActiveMenu((prev) =>
+                      prev === menu.key ? "" : menu.key
+                    );
                   }}
                 >
                   {menu.icon}
                   <p>{menu.name}</p>
-                  <MdOutlineKeyboardArrowUp
+                  <MdOutlineKeyboardArrowDown
                     className={`transition-transform duration-300 ${
                       activeMenu === menu.key ? "transform rotate-180" : ""
                     }`}
@@ -86,15 +84,18 @@ const SecondNavbar = () => {
             setActiveMenu={setActiveMenu}
           />
         )}
-
+      </AnimatePresence>{" "}
+      <AnimatePresence>
         {activeMenu === "game" && (
           <GamesMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         )}
-
+      </AnimatePresence>{" "}
+      <AnimatePresence>
         {activeMenu === "switch" && (
           <SwitchMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         )}
-
+      </AnimatePresence>{" "}
+      <AnimatePresence>
         {activeMenu === "play" && (
           <PlayMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
         )}

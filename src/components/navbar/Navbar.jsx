@@ -36,7 +36,7 @@ const Navbar = () => {
       <div className="flex h-full space-x-2 justify-between">
         <div className="flex items-center space-x-2">
           <svg
-            className="text-white bg-main h-full px-4"
+            className="text-white bg-main h-full p-3 max-w-24"
             viewBox="0 0 97 24"
             xmlns="http://www.w3.org/2000/svg"
             width="140"
@@ -68,7 +68,7 @@ const Navbar = () => {
               onOpenChange={setAllCategoriesMenuIsOpen}
             >
               <DropdownMenuTrigger className="flex text-xs hover:text-main items-center space-x-1">
-                <div>All categories </div>
+                <div className="font-bold">All categories </div>
 
                 <MdOutlineKeyboardArrowUp
                   className={`transition-transform duration-300 ${
@@ -77,45 +77,57 @@ const Navbar = () => {
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem>All categories</DropdownMenuItem>
-                <DropdownMenuItem>Games</DropdownMenuItem>
-                <DropdownMenuItem>Hardware</DropdownMenuItem>
-                <DropdownMenuItem>Merchandise</DropdownMenuItem>
-                <DropdownMenuItem>News & Events</DropdownMenuItem>
-                <DropdownMenuItem>Support</DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  All categories
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  Games
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  Hardware
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  Merchandise
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  News & Events
+                </DropdownMenuItem>
+                <DropdownMenuItem className="text-xs-800">
+                  Support
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-3">
           {!isInputFocused ? (
             <>
-              <ul className="hidden items-center gap-7 max-xl:text-sm lg:flex">
+              <ul className="hidden items-center gap-5 text-xs font-bold lg:flex">
                 <Link href="/" className="text-black hover:text-main">
-                  <li className="font-medium flex items-center gap-1">
-                    <MdContactSupport />
+                  <li className="flex items-center gap-2">
+                    <MdContactSupport className="w-4 h-4" />
                     Support
                   </li>
                 </Link>
                 <Link href="/" className="text-black hover:text-main">
-                  <li className="font-medium flex items-center gap-1">
-                    <FaHeart />
+                  <li className="flex items-center gap-2">
+                    <FaHeart className="w-4 h-4" />
                     Wish List
                   </li>
                 </Link>
                 <Link href="/" className="text-black hover:text-main">
-                  <li className="font-medium flex items-center gap-1">
-                    <FaCartShopping />
+                  <li className="flex items-center gap-2">
+                    <FaCartShopping className="w-4 h-4" />
                     Cart
                   </li>
                 </Link>
                 <li
-                  className="font-medium cursor-pointer flex items-center gap-1 hover:text-main"
+                  className="cursor-pointer flex items-center gap-2 hover:text-main"
                   onClick={() => {
                     setLoginSignUpMenuIsOpen(true);
                   }}
                 >
-                  <FaUser />
+                  <FaUser className="w-4 h-4" />
                   Log in / Sign up
                 </li>
               </ul>

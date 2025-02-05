@@ -42,9 +42,10 @@ const items = [
 const SwitchMenu = ({ activeMenu, setActiveMenu }) => {
   return (
     <motion.div
-      className="w-full h-screen bg-black/40 absolute top-12 z-50 overflow-hidden"
+      className="w-full h-screen bg-black/40 absolute top-10 z-50 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.1 }}
       onClick={() => setActiveMenu("")}
     >
@@ -63,8 +64,8 @@ const SwitchMenu = ({ activeMenu, setActiveMenu }) => {
         >
           <X className="w-8 h-8" />
         </Button>
-        <div className="m-auto w-full max-w-3xl">
-          <div className="grid grid-cols-4">
+        <div className="m-auto w-full max-w-xl">
+          <div className="grid grid-cols-4 gap-4">
             {items.map((item, index) => (
               <div
                 className={`flex flex-col items-center space-y-2 cursor-pointer group ${
@@ -72,10 +73,12 @@ const SwitchMenu = ({ activeMenu, setActiveMenu }) => {
                 }`}
                 key={index}
               >
-                <div className="grid place-items-center border group-hover:bg-main group-hover:text-white transition-colors duration-300 rounded-xl w-9/12 h-20">
+                <div className="grid place-items-center border group-hover:bg-main group-hover:text-white transition-colors duration-300 rounded-xl w-full py-2">
                   {item.image}
                 </div>
-                <h1 className="text-sm group-hover:text-main">{item.title}</h1>
+                <h1 className="text-sm text-center group-hover:text-main">
+                  {item.title}
+                </h1>
               </div>
             ))}
           </div>

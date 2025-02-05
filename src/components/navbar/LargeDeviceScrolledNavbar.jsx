@@ -15,7 +15,7 @@ const LargeDeviceScrolledNavbar = ({ showLargeDeviceScrolledNavbar }) => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           exit={{ top: "-50%" }}
           key={showLargeDeviceScrolledNavbar}
-          className="h-16 flex max-lg:hidden justify-center z-50 shadow-md bg-white-gray text-[#484848] fixed left-0 right-0"
+          className="h-16 flex max-lg:hidden justify-center z-50 shadow-md bg-white-gray text-dark-gray fixed left-0 right-0"
         >
           <div className="max-w-4xl flex justify-between items-center w-full">
             <h1>Stardew Vallery</h1>

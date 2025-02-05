@@ -1,21 +1,21 @@
-"use client"
+"use client";
 import { Coins, Truck } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
 const DetailedNavbar = () => {
   return (
-    <div className="border-y h-12 p-3 bg-white-gray">
+    <div className="border-y h-12 text-xs md:text-sm p-3 bg-white-gray">
       <div className="max-w-4xl m-auto">
         <div className="flex gap-6 justify-center items-center">
           <div className="flex items-center gap-4 max-xl:hidden">
             <Truck className="text-main" />
             <div>
-              <span className="font-medium">Free shipping</span>
-              on orders over $50 or more.{" "}
+              <span className="font-semibold">Free shipping</span> on orders
+              over $50 or more.{" "}
               <Link
                 href="/"
-                className="font-medium underline underline-offset-2"
+                className="font-semibold underline underline-offset-2"
               >
                 Restrictions apply.
               </Link>
@@ -28,7 +28,7 @@ const DetailedNavbar = () => {
               Earn{" "}
               <Link
                 href="/"
-                className="underline underline-offset-2 font-medium"
+                className="underline underline-offset-2 font-semibold"
               >
                 My Nintendo Points
               </Link>{" "}

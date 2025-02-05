@@ -81,7 +81,7 @@ const infoSections = [
 const Information = () => {
   return (
     <div className="w-full">
-      <div className="lg:max-w-[1250px] w-full mx-auto xl:px-14 px-4">
+      <div className="md-container">
         {infoSections.map((section, index) => {
           const Icon = section.icon;
           return (

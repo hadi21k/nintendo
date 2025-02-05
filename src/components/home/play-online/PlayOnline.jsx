@@ -6,7 +6,7 @@ import Link from "next/link";
 const PlayOnline = () => {
   return (
     <div className="w-full">
-      <div className="lg:max-w-[1250px] w-full mx-auto xl:px-14 px-4">
+      <div className="md-container">
         <div className="bg-white-gray grid md:grid-cols-2 md:gap-8 rounded-xl">
           <div className="flex flex-col space-y-8 p-7 justify-between">
             <Image
@@ -15,7 +15,7 @@ const PlayOnline = () => {
               width={100}
               height={100}
             />
-            <p className="font-medium text-2xl">
+            <p className="font-semibold md:text-lg lg:text-xl">
               Play online, access classic NES™ and Super NES™ games, and more
               with a Nintendo Switch Online membership.
             </p>

@@ -6,10 +6,10 @@ import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa6";
 
 const Links = () => {
   return (
-    <div className="w-full bg-main py-12">
-      <div className="lg:max-w-[1500px] flex items-center justify-between w-full mx-auto xl:px-14 px-4">
+    <div className="w-full bg-main py-[48px]">
+      <div className="lg-container flex max-md:flex-col max-md:space-y-4 items-center justify-between">
         <svg
-          className="text-white bg-main h-full px-4 w-56"
+          className="text-white bg-main h-full w-36"
           viewBox="0 0 97 24"
           xmlns="http://www.w3.org/2000/svg"
           width="140"
@@ -24,18 +24,18 @@ const Links = () => {
             fill="currentColor"
           ></path>
         </svg>
-        <div className="flex items-center space-x-5">
+        <div className="flex items-center space-x-10">
           <Link href="http://instagram.com/hadi21k">
-            <FaFacebook className="text-white text-4xl" />
+            <FaFacebook className="link" />
           </Link>
           <Link href="http://instagram.com/hadi21k">
-            <FaInstagram className="text-white text-4xl" />
+            <FaInstagram className="link" />
           </Link>
           <Link href="http://instagram.com/hadi21k">
-            <CiTwitter className="text-white text-4xl" />
+            <CiTwitter className="link" />
           </Link>
           <Link href="http://instagram.com/hadi21k">
-            <FaYoutube className="text-white text-4xl" />
+            <FaYoutube className="link" />
           </Link>
         </div>
       </div>

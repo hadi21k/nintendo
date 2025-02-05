@@ -9,7 +9,7 @@ const Explore = () => {
   const [showMore, setShowMore] = useState(false);
   return (
     <div className="w-full">
-      <div className="lg:max-w-[1250px] w-full mx-auto xl:px-14 px-4">
+      <div className="md-container">
         <div className="flex max-md:flex-col max-md:space-y-8 md:space-x-8 justify-between">
           <div className="flex flex-col space-y-6">
             <h1 className="md:text-3xl font-medium text-lg">

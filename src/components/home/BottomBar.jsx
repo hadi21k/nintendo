@@ -74,7 +74,7 @@ const items = [
 const BottomBar = () => {
   return (
     <div className="w-full bg-white py-10">
-      <div className="flex-col lg:max-w-[1500px] gap-y-10 flex justify-between w-full mx-auto xl:px-14 px-4">
+      <div className="flex-col gap-y-10 flex justify-between lg-container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 gap-4">
           {items.map((item, index) => (
             <div key={index} className="border-l px-4">
