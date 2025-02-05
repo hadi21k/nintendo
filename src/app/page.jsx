@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="mt-32 flex flex-col space-y-14">
+      <div className="lg:mt-28 mt-20 flex flex-col space-y-14">
         <Explore />
         <Support />
         <Information />

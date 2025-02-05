@@ -30,7 +30,7 @@ const HeroDetails = () => {
     };
   }, []);
   return (
-    <div className="md:w-2/3 flex flex-col space-y-6">
+    <div className="md:w-2/3 px-3 flex flex-col space-y-6">
       <div className="flex items-center space-x-3">
         <div className="w-0.5 h-5 bg-main" />
         <h1>Nintendo Switch</h1>
@@ -57,7 +57,7 @@ const HeroDetails = () => {
       <AnimatedButton
         ref={downloadButtonRef}
         hoverClassName="bg-main rounded-xl"
-        className="py-4 rounded-xl bg-main text-white hover:bg-main"
+        className="py-4 rounded-xl bg-main font-bold text-white hover:bg-main"
       >
         <h1 className="text-white text-xl flex items-center justify-center gap-2 z-10">
           <Download className="w-5 h-5" />

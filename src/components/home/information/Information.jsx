@@ -16,8 +16,7 @@ const infoSections = [
       type: "text",
       data: "February 26, 2016",
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
   {
     icon: Users,
@@ -30,8 +29,7 @@ const infoSections = [
         { text: "Online (1-4)", href: "/" },
       ],
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
   {
     icon: Gamepad,
@@ -43,8 +41,7 @@ const infoSections = [
         { text: "Simulation", href: "/" },
       ],
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
   {
     icon: Building,
@@ -53,8 +50,7 @@ const infoSections = [
       type: "links",
       data: [{ text: "ConcernedApe", href: "/" }],
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
   {
     icon: Gamepad2,
@@ -63,8 +59,7 @@ const infoSections = [
       type: "text",
       data: "TV mode, Tabletop mode, Handheld mode",
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
   {
     icon: Globe,
@@ -73,8 +68,7 @@ const infoSections = [
       type: "text",
       data: "English, French, German, Italian, Japanese, Korean, Portuguese, Russian, Simplified Chinese, Spanish, Traditional Chinese",
     },
-    className:
-      "flex max-md:flex-col max-md:space-y-4 md:items-center border-y px-2 py-4",
+    className: "flex md:items-center border-y px-2 py-4",
   },
 ];
 
@@ -92,7 +86,9 @@ const Information = () => {
               </div>
               <div className="w-3/4">
                 {section.content.type === "text" ? (
-                  <p className="text-gray-500">{section.content.data}</p>
+                  <p className="text-gray-500 text-sm">
+                    {section.content.data}
+                  </p>
                 ) : (
                   <div className="space-x-2">
                     {section.content.data.map((link, linkIndex) => (

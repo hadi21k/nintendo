@@ -179,13 +179,13 @@ const Games = () => {
   return (
     <div className="w-full">
       <div className="relative flex flex-col space-y-10 md-container">
-        <h1 className="text-3xl font-medium">More like this</h1>
+        <h1 className="text-3xl font-semibold">More like this</h1>
         <div
           ref={containerRef}
           onScroll={checkScrollPosition}
           className="h-96 px-4 overflow-x-hidden"
         >
-          <div className="flex w-max h-full space-x-4">
+          <div className="flex w-max h-full space-x-8">
             {items.map((item, index) => (
               <Game key={index} item={item} />
             ))}

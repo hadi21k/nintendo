@@ -17,10 +17,10 @@ const LargeDeviceScrolledNavbar = ({ showLargeDeviceScrolledNavbar }) => {
           key={showLargeDeviceScrolledNavbar}
           className="h-16 flex max-lg:hidden justify-center z-50 shadow-md bg-white-gray text-dark-gray fixed left-0 right-0"
         >
-          <div className="max-w-4xl flex justify-between items-center w-full">
+          <div className="flex justify-between font-bold items-center md-container">
             <h1>Stardew Vallery</h1>
             <div className="flex items-center gap-6 font-medium">
-              <div className="flex items-center space-x-1">
+              <div className="flex font-bold items-center space-x-2">
                 <span className="text-xs">Digital</span>
                 <p>$14.99</p>
               </div>
@@ -28,7 +28,7 @@ const LargeDeviceScrolledNavbar = ({ showLargeDeviceScrolledNavbar }) => {
                 hoverClassName="bg-red-500"
                 className="px-14 py-2 rounded-3xl bg-main text-white hover:bg-main"
               >
-                <h1 className="text-white flex items-center gap-2 z-10">
+                <h1 className="text-white font-bold flex items-center gap-2 z-10">
                   <Download className="w-5 h-5" />
                   Direct Download
                 </h1>

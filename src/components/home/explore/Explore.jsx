@@ -12,7 +12,7 @@ const Explore = () => {
       <div className="md-container">
         <div className="flex max-md:flex-col max-md:space-y-8 md:space-x-8 justify-between">
           <div className="flex flex-col space-y-6">
-            <h1 className="md:text-3xl font-medium text-lg">
+            <h1 className="text-xl font-bold">
               You're moving to the valley...
             </h1>
             <p className="text-gray-500 text-sm tracking-wide">
@@ -38,7 +38,7 @@ const Explore = () => {
               onClick={() => setShowMore(!showMore)}
               className="flex items-center w-32 text-main hover:text-main-hover font-bold cursor-pointer"
             >
-              {showMore ? <Plus /> : <Minus />}
+              {showMore ? <Minus /> : <Plus />}
               {showMore ? "Show Less" : "Show More"}
             </div>
             <p className="text-gray-500 text-xs">
@@ -47,7 +47,7 @@ const Explore = () => {
             <div className="flex justify-start">
               <AnimatedButton
                 hoverClassName="bg-main rounded-xl"
-                className="py-3 px-5 rounded-xl bg-main text-white hover:bg-main"
+                className="py-3 px-5 font-semibold rounded-xl bg-main text-white hover:bg-main"
               >
                 <Link
                   className="text-white text-base flex items-center justify-center gap-2 z-10"

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Game = ({ item }) => {
   return (
-    <div className="border w-72 flex flex-col group space-y-4 rounded-xl min-h-96 item">
+    <div className="border w-72 flex flex-col group space-y-4 rounded-xl h-80 item">
       <Image
         src={item.image}
         alt={item.title}

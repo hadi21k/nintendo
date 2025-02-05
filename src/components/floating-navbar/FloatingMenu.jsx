@@ -21,7 +21,7 @@ const FloatingMenu = ({ modals, setModals }) => {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
-            className="bg-white-gray z-[100] rounded-t-3xl w-full fixed inset-x-0 bottom-0 max-w-[440px] mx-auto max-h-[80vh] h-full overflow-y-auto"
+            className="bg-white-gray z-[100] rounded-t-3xl w-full fixed inset-x-0 bottom-0 max-w-[440px] mx-auto max-h-[50vh] h-full overflow-y-auto"
           >
             <div className="bg-white relative rounded-t-3xl py-4 flex items-center justify-center">
               Menu

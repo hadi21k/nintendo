@@ -12,8 +12,8 @@ const PlayOnline = () => {
             <Image
               src="https://shadowindali.github.io/Nintendo/online.png"
               alt="online"
-              width={100}
-              height={100}
+              width={200}
+              height={200}
             />
             <p className="font-semibold md:text-lg lg:text-xl">
               Play online, access classic NES™ and Super NES™ games, and more
@@ -38,7 +38,7 @@ const PlayOnline = () => {
             <div className="flex">
               <AnimatedButton
                 hoverClassName="bg-main rounded-xl"
-                className="p-3 rounded-xl bg-main text-white hover:bg-main"
+                className="px-7 py-3 rounded-xl font-bold bg-main text-white hover:bg-main"
               >
                 <h1 className="text-white flex items-center justify-center gap-2 z-10">
                   Learn more
